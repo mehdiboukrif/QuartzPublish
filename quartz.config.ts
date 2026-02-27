@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "fr-FR",
-    baseUrl: "mehdiboukrif.github.io/quartz-garden",
+    baseUrl: "methode3cl.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -86,6 +86,7 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
+      Plugin.CNAME(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
     ],
