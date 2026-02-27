@@ -117,3 +117,4 @@ Dernière mise à jour - Octobre 2021
 [[18.3.3-Données à plus de 800 m d'altitude]]
 [[18.4-Facteur de couverture solaire]]
 [[18.5-Coefficients d'orientation et d'inclinaison des parois vitrées C1]]
+[[Glossaire]]
