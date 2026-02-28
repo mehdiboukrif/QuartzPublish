@@ -2,7 +2,6 @@
 @use "sass:map";
 @use "./variables.scss" as *;
 
-// Typographie plus fine et élégante
 html {
   font-size: 15px;
   scrollbar-gutter: stable;
@@ -31,7 +30,6 @@ tbody, li, p {
   line-height: 1.55rem;
 }
 
-// Titres de l'explorateur plus fins
 button.desktop-explorer h2,
 button.mobile-explorer h2 {
   font-weight: 500;
@@ -42,34 +40,13 @@ button.mobile-explorer h2 {
   font-weight: 500;
 }
 
-// Masquer le footer
 footer {
   display: none !important;
 }
 
-// Corrections mobile
 @media all and ($mobile) {
   html {
     scrollbar-gutter: auto;
-  }
-
-  #quartz-body {
-    overflow-x: hidden;
-    box-sizing: border-box;
-    max-width: 100vw;
-    padding: 0 1rem !important;
-  }
-
-  .center {
-    overflow-x: hidden;
-    min-width: 0;
-    box-sizing: border-box;
-  }
-
-  article {
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
   }
 
   .katex-display {
