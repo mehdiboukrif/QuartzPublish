@@ -6,6 +6,7 @@
     & > :not(.sidebar.left:has(.explorer)) {
       transition: transform 300ms ease-in-out;
     }
+
     &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
       transform: translateX(100dvw);
       transition: transform 300ms ease-in-out;
@@ -16,9 +17,8 @@
       box-sizing: border-box;
       position: sticky;
       background-color: var(--light);
-      padding: 1rem 1rem 1rem 1rem;
+      padding: 1rem 0 1rem 0;
       margin: 0;
-      z-index: 200;
     }
 
     .hide-until-loaded ~ .explorer-content {
@@ -34,8 +34,10 @@
 
   min-height: 1.2rem;
   flex: 0 1 auto;
+
   &.collapsed {
     flex: 0 1 1.2rem;
+
     & .fold {
       transform: rotateZ(-90deg);
     }
@@ -112,18 +114,17 @@ button.desktop-explorer {
 .explorer-content {
   list-style: none;
   overflow: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   margin-top: 0.5rem;
-
-  &:hover {
-    overflow-y: auto;
-  }
 
   & ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    overscroll-behavior: contain;
+
+    &.explorer-ul {
+      overscroll-behavior: contain;
+    }
 
     & li > a {
       color: var(--dark);
@@ -242,7 +243,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     .explorer-content {
       box-sizing: border-box;
       z-index: 100;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       margin-top: 0;
@@ -254,7 +255,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
         transform 200ms ease,
         visibility 200ms ease;
       overflow: hidden;
-      padding: 4rem 1.5rem 2rem 1.5rem;
+      padding: 4rem 0 2rem 0;
       height: 100dvh;
       max-height: 100dvh;
       visibility: hidden;
@@ -274,6 +275,8 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
 
 .mobile-no-scroll {
   @media all and ($mobile) {
-    overscroll-behavior: none;
+    .explorer-content > .explorer-ul {
+      overscroll-behavior: contain;
+    }
   }
 }
