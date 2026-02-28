@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "fr-FR",
-    baseUrl: "methode3cl.com",
+    baseUrl: "mehdiboukrif.github.io/QuartzPublish",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
